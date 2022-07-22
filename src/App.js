@@ -4,11 +4,12 @@ import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom';
 import Workout from './routers/Workout';
 import Weight from './routers/Weight';
 import Diet from './routers/Diet';
+import Main from './routers/Main';
 
 function App() {
   return (
     <div className='App'>
-      <Navbar bg='primary' variant='dark'>
+      <Navbar bg='success' variant='dark' className='mainNav'>
         <Container>
           <Navbar.Brand href='/'>운동도우미</Navbar.Brand>
           <Nav className='me-auto'>
@@ -23,7 +24,7 @@ function App() {
         </Container>
       </Navbar>
       <Routes>
-        <Route path='/'></Route>
+        <Route path='/' element={<Main />}></Route>
         <Route path='/workout' element={<Workout />}></Route>
         <Route path='/diet' element={<Diet />}></Route>
         <Route path='/weight' element={<Weight />}></Route>
