@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom';
+import Workout from './routers/Workout';
+import Weight from './routers/Weight';
+import Diet from './routers/Diet';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Navbar bg='primary' variant='dark'>
+        <Container>
+          <Navbar.Brand href='/'>운동도우미</Navbar.Brand>
+          <Nav className='me-auto'>
+            <Nav.Link href='/workout'>운동기록</Nav.Link>
+            <Nav.Link href='/diet'>식단기록</Nav.Link>
+            <Nav.Link href='/weight'>체중기록</Nav.Link>
+          </Nav>
+        </Container>
+        <Container style={{ width: '15%' }}>
+          <Nav>마이페이지</Nav>
+          <Nav>로그인</Nav>
+        </Container>
+      </Navbar>
+      <Routes>
+        <Route path='/'></Route>
+        <Route path='/workout' element={<Workout />}></Route>
+        <Route path='/diet' element={<Diet />}></Route>
+        <Route path='/weight' element={<Weight />}></Route>
+      </Routes>
     </div>
   );
 }
