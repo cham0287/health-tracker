@@ -3,25 +3,52 @@ import TakenFood from '../components/TakenFood';
 import TakenNutrient from '../components/TakenNutrient';
 import SelectOption from '../components/SelectOption';
 
-function Diet({ diet, setDiet }) {
+function Diet() {
   let [selectState, setSelectState] = useState('음식을 선택하세요');
   let [foodCount, setFoodCount] = useState(0);
-  let [dietList, setDietList] = useState([{ food: '휠렛버거', count: 2 }]);
+  let [breakfastList, setBreakfastList] = useState([]);
+  let [lunchList, setLunchList] = useState([]);
+  let [dinnerList, setDinnerList] = useState([]);
+  let [snackList, setSnackList] = useState([]);
   let [mealTime, setMealTime] = useState('');
-  console.log(diet);
+  let [mealType, setMealType] = useState('아침');
+  let [nutrient, setNutrient] = useState([0, 0, 0]);
 
   return (
     <div>
       <SelectOption
-        setSelectState={setSelectState}
-        setFoodCount={setFoodCount}
-        dietList={dietList}
         selectState={selectState}
+        setSelectState={setSelectState}
         foodCount={foodCount}
-        setDietList={setDietList}
+        setFoodCount={setFoodCount}
+        breakfastList={breakfastList}
+        setBreakfastList={setBreakfastList}
+        lunchList={lunchList}
+        setLunchList={setLunchList}
+        dinnerList={dinnerList}
+        setDinnerList={setDinnerList}
+        snackList={snackList}
+        setSnackList={setSnackList}
+        mealTime={mealTime}
+        setMealTime={setMealTime}
+        nutrient={nutrient}
+        setNutrient={setNutrient}
       />
-      <TakenFood dietList={dietList} />
-      <TakenNutrient />
+      <TakenFood
+        breakfastList={breakfastList}
+        setBreakfastList={setBreakfastList}
+        lunchList={lunchList}
+        setLunchList={setLunchList}
+        dinnerList={dinnerList}
+        setDinnerList={setDinnerList}
+        snackList={snackList}
+        setSnackList={setSnackList}
+        mealType={mealType}
+        setMealType={setMealType}
+        nutrient={nutrient}
+        setNutrient={setNutrient}
+      />
+      <TakenNutrient nutrient={nutrient} />
     </div>
   );
 }

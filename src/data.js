@@ -17,7 +17,7 @@ let data = [
   },
   {
     id: 2,
-    name: '위트빅스 1조각',
+    name: '위트빅스1조각',
     carbonhydrate: 11,
     protein: 2,
     fat: 0.2,

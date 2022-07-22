@@ -3,16 +3,36 @@ import data from '../data';
 function SelectOption({
   setSelectState,
   setFoodCount,
-  dietList,
-  setDietList,
   foodCount,
   selectState,
+  mealTime,
+  setMealTime,
+  breakfastList,
+  setBreakfastList,
+  lunchList,
+  setLunchList,
+  dinnerList,
+  setDinnerList,
+  snackList,
+  setSnackList,
+  nutrient,
+  setNutrient,
 }) {
+  let 찾은메뉴 = data.find((food) => {
+    return food.name == selectState;
+  });
+
   return (
     <div className='selectOption'>
       <div>
         <label for='meal'>식사 구분 :</label>
-        <select name='meal' id='meal'>
+        <select
+          name='meal'
+          id='meal'
+          onChange={(e) => {
+            setMealTime(e.target.value);
+          }}
+        >
           <option>선택</option>
           <option>아침</option>
           <option>점심</option>
@@ -45,9 +65,30 @@ function SelectOption({
         ></input>
         <button
           onClick={() => {
-            let newDiet = [...dietList];
-            newDiet.push({ food: selectState, count: foodCount });
-            setDietList(newDiet);
+            if (foodCount < 1) {
+              alert('0 이상의 숫자를 입력하세요');
+            } else if (mealTime == '아침') {
+              let newDiet = [...breakfastList];
+              newDiet.push({ food: selectState, count: foodCount });
+              setBreakfastList(newDiet);
+            } else if (mealTime == '점심') {
+              let newDiet = [...lunchList];
+              newDiet.push({ food: selectState, count: foodCount });
+              setLunchList(newDiet);
+            } else if (mealTime == '저녁') {
+              let newDiet = [...dinnerList];
+              newDiet.push({ food: selectState, count: foodCount });
+              setDinnerList(newDiet);
+            } else if (mealTime == '간식') {
+              let newDiet = [...snackList];
+              newDiet.push({ food: selectState, count: foodCount });
+              setSnackList(newDiet);
+            }
+            setNutrient([
+              nutrient[0] + 찾은메뉴.carbonhydrate,
+              nutrient[1] + 찾은메뉴.protein,
+              nutrient[2] + 찾은메뉴.fat,
+            ]);
           }}
         >
           추가하기

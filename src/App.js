@@ -1,6 +1,6 @@
 import './App.css';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Workout from './routers/Workout';
 import Weight from './routers/Weight';
 import Diet from './routers/Diet';
