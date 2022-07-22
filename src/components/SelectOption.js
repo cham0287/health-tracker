@@ -9,7 +9,7 @@ function SelectOption({
   selectState,
 }) {
   return (
-    <>
+    <div className='selectOption'>
       <div>
         <label for='meal'>식사 구분 :</label>
         <select name='meal' id='meal'>
@@ -53,7 +53,7 @@ function SelectOption({
           추가하기
         </button>
       </div>
-    </>
+    </div>
   );
 }
 

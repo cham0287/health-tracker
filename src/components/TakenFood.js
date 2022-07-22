@@ -2,7 +2,7 @@ function TakenFood({ dietList }) {
   return (
     <div className='takenFood'>
       섭취한 음식 목록
-      <ul type='disc'>
+      <ul style={{ listStyleType: 'none', paddingLeft: 0 }}>
         {dietList.map((item, i) => {
           return (
             <li>
