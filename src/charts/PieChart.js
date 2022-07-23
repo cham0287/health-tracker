@@ -17,7 +17,7 @@ const options = {
       text: '탄단지 차트',
       color: 'hsl(152deg 68% 32%)',
       font: {
-        size: 34,
+        size: 60,
       },
       padding: {
         top: 30,
