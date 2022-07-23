@@ -12,7 +12,7 @@ function Diet() {
   let [snackList, setSnackList] = useState([]);
   let [mealTime, setMealTime] = useState('');
   let [mealType, setMealType] = useState('아침');
-  let [nutrient, setNutrient] = useState([0, 0, 0]);
+  let [nutrient, setNutrient] = useState([0, 0, 0, 0]);
 
   return (
     <div>

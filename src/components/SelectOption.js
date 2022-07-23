@@ -88,6 +88,7 @@ function SelectOption({
               nutrient[0] + 찾은메뉴.carbonhydrate,
               nutrient[1] + 찾은메뉴.protein,
               nutrient[2] + 찾은메뉴.fat,
+              nutrient[3] + 찾은메뉴.calorie,
             ]);
           }}
         >
