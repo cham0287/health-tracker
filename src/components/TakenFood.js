@@ -9,7 +9,7 @@ function TakenFood({
   setMealType,
 }) {
   return (
-    <div className='takenFood'>
+    <div className='takenFood' style={{ fontSize: '25px' }}>
       섭취한 음식 목록
       <Nav variant='tabs' defaultActiveKey='link0'>
         <Nav.Item>

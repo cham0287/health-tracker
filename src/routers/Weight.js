@@ -1,5 +1,5 @@
 function Weight() {
-  return <div>체중 기록 페이지</div>;
+  return <div></div>;
 }
 
 export default Weight;

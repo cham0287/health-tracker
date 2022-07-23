@@ -47,19 +47,31 @@ function TakenNutrient({ nutrient }) {
 
   return (
     <div className='takenNutrient'>
+      <div className='calorie'>
+        <div>섭취한 칼로리</div>
+        <div>{nutrient[3] + 'kcal'}</div>
+      </div>
+
+      <div className='chart'>
+        <PieChart nutrient={nutrient} chartData={chartData} />
+      </div>
       <Row>
         <Col xs='auto' md={4}>
-          <Card body>섭취한 탄수화물량 :{' ' + nutrient[0] + 'g'}</Card>
+          <div className='eachNutrient'>
+            섭취한 탄수화물량 :{' ' + nutrient[0].toFixed(1) + 'g'}
+          </div>
         </Col>
         <Col xs='auto' md={4}>
-          <Card body>섭취한 단백질량 : {' ' + nutrient[1] + 'g'}</Card>
+          <div className='eachNutrient'>
+            섭취한 단백질량 : {' ' + nutrient[1].toFixed(1) + 'g'}
+          </div>
         </Col>
         <Col xs='auto' md={4}>
-          <Card body>섭취한 지방량 : {' ' + nutrient[2] + 'g'}</Card>
+          <div className='eachNutrient'>
+            섭취한 지방량 : {' ' + nutrient[2].toFixed(1) + 'g'}
+          </div>
         </Col>
       </Row>
-      <div>섭취한 총 칼로리 : {nutrient[3] + 'kcal'}</div>
-      <PieChart nutrient={nutrient} chartData={chartData} />
     </div>
   );
 }

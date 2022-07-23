@@ -16,7 +16,7 @@
 
 .mainPage {
   margin: auto;
-  margin-top: 80px;
+  margin-top: 35px;
   width: 70%;
   height: 50%;
   padding-bottom: 10%;
@@ -28,9 +28,10 @@
 }
 
 .takenFood {
-  border: 5px solid yellowgreen;
+  color: hsl(152deg 68% 32%);
+  border: 5px solid rgb(129, 219, 177);
+  background-color: rgb(236, 239, 143);
   border-radius: 15px;
-  background-color: aquamarine;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 15px;
@@ -41,11 +42,18 @@
   margin-right: 25%;
 }
 .takenFood li {
-  border: 3px solid yellowgreen;
+  border: 1px solid rgb(129, 219, 177);
+  border-radius: 10px;
+  width: 40%;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .selectOption {
-  color: white;
+  font-size: 17px;
+  border: 5px solid rgb(129, 219, 177);
+  color: hsl(152deg 68% 32%);
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 15px;
@@ -54,7 +62,7 @@
   margin-bottom: 20px;
   margin-left: 25%;
   margin-right: 25%;
-  background-color: blueviolet;
+  background-color: rgb(236, 239, 143);
   border-radius: 15px;
   text-align: left;
   width: 50%;
@@ -67,19 +75,48 @@
 .selectOption input {
   border-radius: 5px;
   margin-left: 0;
-  height: 23px;
+  height: 24px;
   width: 120px;
   padding: 0;
   border: 1px solid black;
 }
 
+.selectOption button {
+  height: 24px;
+}
+
 .takenNutrient {
+  position: relative;
   margin-left: 10%;
   margin-right: 10%;
+  margin-bottom: 200px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 5px solid rgb(129, 219, 177);
+  background-color: rgb(236, 239, 143);
+  border-radius: 25px;
+}
+
+.eachNutrient {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 5px solid rgb(236, 239, 143);
+  border-radius: 15px;
+  background-color: yellowgreen;
 }
 
 .chart {
   max-width: 50%;
   max-height: 40%;
   margin: auto;
+  margin-bottom: 70px;
+}
+
+.calorie {
+  font-size: 20px;
+  position: absolute;
+  left: 361px;
+  top: 260px;
 }

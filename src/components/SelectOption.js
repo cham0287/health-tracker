@@ -24,6 +24,8 @@ function SelectOption({
 
   return (
     <div className='selectOption'>
+      <div style={{ textAlign: 'center', fontSize: '25px' }}>음식추가</div>
+
       <div>
         <label for='meal'>식사 구분 :</label>
         <select
@@ -85,10 +87,10 @@ function SelectOption({
               setSnackList(newDiet);
             }
             setNutrient([
-              nutrient[0] + 찾은메뉴.carbonhydrate,
-              nutrient[1] + 찾은메뉴.protein,
-              nutrient[2] + 찾은메뉴.fat,
-              nutrient[3] + 찾은메뉴.calorie,
+              nutrient[0] + 찾은메뉴.carbonhydrate * foodCount,
+              nutrient[1] + 찾은메뉴.protein * foodCount,
+              nutrient[2] + 찾은메뉴.fat * foodCount,
+              nutrient[3] + 찾은메뉴.calorie * foodCount,
             ]);
           }}
         >
