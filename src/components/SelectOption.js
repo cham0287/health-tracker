@@ -67,8 +67,14 @@ function SelectOption({
         ></input>
         <button
           onClick={() => {
-            if (foodCount < 1) {
-              alert('0 이상의 숫자를 입력하세요');
+            if (mealTime == '선택') {
+              alert('음식을 선택하세요');
+
+              return;
+            } else if (foodCount < 1) {
+              alert('1 이상의 숫자를 입력하세요');
+
+              return;
             } else if (mealTime == '아침') {
               let newDiet = [...breakfastList];
               newDiet.push({ food: selectState, count: foodCount });
