@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import TakenFood from '../components/TakenFood';
-import TakenNutrient from '../components/TakenNutrient';
-import SelectOption from '../components/SelectOption';
+import TakenFood from '../components/Diet/TakenFood';
+import TakenNutrient from '../components/Diet/TakenNutrient';
+import SelectOption from '../components/Diet/SelectOption';
 
 function Diet() {
   let [selectState, setSelectState] = useState('음식을 선택하세요');

@@ -9,7 +9,7 @@ function TakenFood({
   setMealType,
 }) {
   return (
-    <div className='takenFood' style={{ fontSize: '25px' }}>
+    <div className='takenFood' style={{ fontSize: '32px' }}>
       섭취한 음식 목록
       <Nav variant='tabs' defaultActiveKey='link0'>
         <Nav.Item>
@@ -67,7 +67,7 @@ function MealList({ dietList }) {
       {dietList.map((item, i) => {
         return (
           <li>
-            {item.food}x{item.count}
+            {item.food + ' '}x{' ' + item.count}
           </li>
         );
       })}

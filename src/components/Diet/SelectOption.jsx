@@ -1,4 +1,4 @@
-import data from '../data';
+import data from '../../data';
 
 function SelectOption({
   setSelectState,
@@ -24,7 +24,7 @@ function SelectOption({
 
   return (
     <div className='selectOption'>
-      <div style={{ textAlign: 'center', fontSize: '25px' }}>음식추가</div>
+      <div style={{ textAlign: 'center', fontSize: '32px' }}>음식추가</div>
 
       <div>
         <label for='meal'>식사 구분 :</label>

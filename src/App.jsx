@@ -4,7 +4,8 @@ import { Routes, Route } from 'react-router-dom';
 import Workout from './routers/Workout';
 import Weight from './routers/Weight';
 import Diet from './routers/Diet';
-import Main from './routers/Main';
+import Main from './components/Main';
+import Cal from './routers/Cal';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Nav.Link href='/workout'>운동기록</Nav.Link>
             <Nav.Link href='/diet'>식단기록</Nav.Link>
             <Nav.Link href='/weight'>체중기록</Nav.Link>
+            <Nav.Link href='/calendar'>달력</Nav.Link>
           </Nav>
         </Container>
         <Container style={{ width: '15%' }}>
@@ -28,6 +30,7 @@ function App() {
         <Route path='/workout' element={<Workout />}></Route>
         <Route path='/diet' element={<Diet />}></Route>
         <Route path='/weight' element={<Weight />}></Route>
+        <Route path='/calendar' element={<Cal />}></Route>
       </Routes>
     </div>
   );

@@ -1,6 +1,6 @@
 import { Row, Col, Card } from 'react-bootstrap';
-import PieChart from '../charts/PieChart';
-import { ChartData } from '../chartData';
+import PieChart from '../../charts/PieChart';
+import { ChartData } from '../../chartData';
 import { useEffect, useState } from 'react';
 
 function TakenNutrient({ nutrient }) {
@@ -47,35 +47,35 @@ function TakenNutrient({ nutrient }) {
       </div>
       <Row>
         <Col xs='auto' md={4}>
-          <div className='eachNutrient'>
-            탄수화물 :{' ' + nutrient[0].toFixed(1) + 'g'}
+          <div className='eachNutrient' style={{ background: '#1db6ae' }}>
+            탄수화물 : {((nutrient[0] * 400) / totalKcal).toFixed(1) + '%'}
           </div>
         </Col>
         <Col xs='auto' md={4}>
-          <div className='eachNutrient'>
-            단백질 : {' ' + nutrient[1].toFixed(1) + 'g'}
+          <div className='eachNutrient' style={{ background: '#ffaa01' }}>
+            단백질 : {((nutrient[1] * 400) / totalKcal).toFixed(1) + '%'}
           </div>
         </Col>
         <Col xs='auto' md={4}>
-          <div className='eachNutrient'>
-            지방 : {' ' + nutrient[2].toFixed(1) + 'g'}
+          <div className='eachNutrient' style={{ background: '#f94c2e' }}>
+            지방 : {((nutrient[2] * 900) / totalKcal).toFixed(1) + '%'}
           </div>
         </Col>
       </Row>
       <Row>
         <Col xs='auto' md={4}>
           <div className='eachPercent'>
-            {((nutrient[0] * 400) / totalKcal).toFixed(1) + '%'}
+            {' ' + nutrient[0].toFixed(1) + 'g'}
           </div>
         </Col>
         <Col xs='auto' md={4}>
           <div className='eachPercent'>
-            {((nutrient[1] * 400) / totalKcal).toFixed(1) + '%'}
+            {' ' + nutrient[1].toFixed(1) + 'g'}
           </div>
         </Col>
         <Col xs='auto' md={4}>
           <div className='eachPercent'>
-            {((nutrient[2] * 900) / totalKcal).toFixed(1) + '%'}
+            {' ' + nutrient[2].toFixed(1) + 'g'}
           </div>
         </Col>
       </Row>

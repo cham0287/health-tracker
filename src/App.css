@@ -27,29 +27,6 @@
   font-size: 36px;
 }
 
-.takenFood {
-  color: hsl(152deg 68% 32%);
-  border: 5px solid rgb(129, 219, 177);
-  background-color: rgb(236, 239, 143);
-  border-radius: 15px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 25%;
-  margin-right: 25%;
-}
-.takenFood li {
-  border: 1px solid rgb(129, 219, 177);
-  border-radius: 10px;
-  width: 40%;
-  margin: auto;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
 .selectOption {
   font-size: 17px;
   border: 5px solid rgb(129, 219, 177);
@@ -85,12 +62,41 @@
   height: 24px;
 }
 
+.takenFood {
+  color: hsl(152deg 68% 32%);
+  border: 5px solid rgb(129, 219, 177);
+  background-color: rgb(236, 239, 143);
+  border-radius: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+.takenFood a {
+  font-size: 1.6vw;
+}
+
+.takenFood li {
+  background-color: white;
+  color: #1a8754;
+  font-size: 1.6vw;
+  border: 1px solid rgb(129, 219, 177);
+  border-radius: 10px;
+  width: 45%;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 .takenNutrient {
   position: relative;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 25%;
+  margin-right: 25%;
   margin-bottom: 200px;
-  padding-top: 20px;
   padding-bottom: 30px;
   padding-left: 20px;
   padding-right: 20px;
@@ -100,33 +106,31 @@
 }
 
 .eachNutrient {
-  font-size: 2.3vw;
+  font-size: 1.3vw;
   font-weight: 650;
   margin: auto;
-  width: 20vw;
+  width: 10vw;
   padding-top: 10px;
   padding-bottom: 10px;
-  border: 5px solid rgb(129, 219, 177);
-  border-radius: 25px;
-  background-color: #40cd32;
+  border-radius: 20px;
   color: white;
 }
 
 .eachPercent {
-  font-size: 2.2vw;
+  font-size: 1.3vw;
   text-align: center;
   margin: auto;
-  padding-top: 8%;
-  width: 8vw;
-  height: 8vw;
-  border: 5px solid rgb(129, 219, 177);
-  border-radius: 4vw;
+  margin-top: 5px;
+  padding-top: 4%;
+  width: 4vw;
+  height: 3vw;
+  border-radius: 1vw;
   background-color: #1a8754;
   color: white;
 }
 
 .chart {
-  max-width: 50%;
+  max-width: 30vw;
   max-height: 40%;
   margin: auto;
   margin-bottom: 40px;
@@ -134,9 +138,9 @@
 
 .calorie {
   color: black;
-  font-size: 2.3vw;
+  font-size: 1.3vw;
   font-weight: 700;
   position: absolute;
-  left: 42%;
-  top: 40%;
+  left: 43%;
+  top: 42%;
 }
