@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import workoutData from '../../workoutData';
 
-function AddTraining({ trainList, setTrainList }) {
+function AddTraining({ part1, setPart1, part2, setPart2, part3, setPart3 }) {
   let [part, setPart] = useState('선택');
   let [selectTrain, setSelectTrain] = useState('선택');
   let [weight, setWeight] = useState(0);
   let [times, setTimes] = useState(0);
   let [setNum, setSetNum] = useState(0);
   return (
-    <div className='selectOption'>
+    <div className='addTraining'>
       <div style={{ textAlign: 'center', fontSize: '32px' }}>운동 추가</div>
       <div>
         <label for='training'>운동 부위 :</label>
@@ -61,7 +61,7 @@ function AddTraining({ trainList, setTrainList }) {
           }}
         ></input>
         <br />
-        <label>횟수 : </label>
+        <label>횟수 :</label>
         <input
           type='number'
           onChange={(e) => {
@@ -78,18 +78,42 @@ function AddTraining({ trainList, setTrainList }) {
         ></input>
         <button
           onClick={() => {
-            let newList = [
-              ...trainList,
-              {
-                part: part,
-                name: selectTrain,
-                weight: weight,
-                times: times,
-                num: setNum,
-              },
-            ];
-
-            setTrainList(newList);
+            if (part == '등/이두') {
+              let newList = [
+                ...part1,
+                {
+                  name: selectTrain,
+                  weight: weight,
+                  times: times,
+                  num: setNum,
+                },
+              ];
+              setPart1(newList);
+            }
+            if (part == '가슴/삼두') {
+              let newList = [
+                ...part2,
+                {
+                  name: selectTrain,
+                  weight: weight,
+                  times: times,
+                  num: setNum,
+                },
+              ];
+              setPart2(newList);
+            }
+            if (part == '하체/어깨/복근') {
+              let newList = [
+                ...part3,
+                {
+                  name: selectTrain,
+                  weight: weight,
+                  times: times,
+                  num: setNum,
+                },
+              ];
+              setPart3(newList);
+            }
           }}
         >
           추가하기

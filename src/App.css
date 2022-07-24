@@ -144,3 +144,65 @@
   left: 43%;
   top: 42%;
 }
+
+.addTraining {
+  font-size: 17px;
+  border: 5px solid rgb(129, 219, 177);
+  color: hsl(152deg 68% 32%);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  background-color: rgb(236, 239, 143);
+  border-radius: 15px;
+  text-align: left;
+  width: 50%;
+}
+
+.addTraining label {
+  width: 80px;
+}
+.trainingList {
+  font-size: 17px;
+  border: 5px solid rgb(129, 219, 177);
+  color: hsl(152deg 68% 32%);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  background-color: rgb(236, 239, 143);
+  border-radius: 15px;
+  text-align: left;
+  width: 80%;
+}
+
+.eachPart {
+  text-align: center;
+  font-size: 1.3vw;
+  font-weight: 650;
+  margin: auto;
+  width: 10vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  color: white;
+}
+
+.partBox {
+  padding-top: 15px;
+  margin: auto;
+  font-size: 17px;
+  border: 5px solid rgb(129, 219, 177);
+  color: hsl(152deg 68% 32%);
+  background-color: rgb(236, 239, 143);
+  border-radius: 15px;
+  width: 80%;
+}
