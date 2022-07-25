@@ -9,7 +9,7 @@ function Workout() {
 
   return (
     <div>
-      <div>운동 기록 페이지</div>
+      <h2>오늘 무슨 운동 했어</h2>
       <AddTraining
         part1={part1}
         setPart1={setPart1}

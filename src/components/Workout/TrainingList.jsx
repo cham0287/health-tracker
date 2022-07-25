@@ -3,7 +3,8 @@ import { Row, Col } from 'react-bootstrap';
 function TrainingList({ part1, part2, part3 }) {
   return (
     <div className='trainingList'>
-      <div>운동목록</div>
+      <div style={{ textAlign: 'center', fontSize: '32px' }}>운동 목록</div>
+
       <Row>
         <Col xs='auto' md={4}>
           <div className='eachPart' style={{ background: '#1db6ae' }}>
