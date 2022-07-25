@@ -9,7 +9,7 @@ function Workout() {
 
   return (
     <div>
-      <h2>오늘 무슨 운동 했어</h2>
+      <h2>오늘 무슨 운동 했어?</h2>
       <AddTraining
         part1={part1}
         setPart1={setPart1}
@@ -18,7 +18,14 @@ function Workout() {
         part3={part3}
         setPart3={setPart3}
       />
-      <TrainingList part1={part1} part2={part2} part3={part3} />
+      <TrainingList
+        part1={part1}
+        setPart1={setPart1}
+        part2={part2}
+        setPart2={setPart2}
+        part3={part3}
+        setPart3={setPart3}
+      />
     </div>
   );
 }

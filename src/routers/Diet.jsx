@@ -16,7 +16,7 @@ function Diet() {
 
   return (
     <div>
-      <h2>오늘 뭐 먹었어</h2>
+      <h2>오늘 뭐 먹었어?</h2>
       <SelectOption
         selectState={selectState}
         setSelectState={setSelectState}

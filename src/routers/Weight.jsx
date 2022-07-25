@@ -11,10 +11,16 @@ function Weight() {
       </h1>
       <div className='weight'>
         <p>
-          당신의 키는?{' '}
+          당신의 키는?
           <input
             onChange={(e) => {
-              신장변경(e.target.value);
+              if (e.target.value < 0) {
+                신장변경(0);
+
+                alert('양수만 입력 가능합니다.');
+              } else {
+                신장변경(e.target.value);
+              }
             }}
           ></input>
           체중을 입력하세요!

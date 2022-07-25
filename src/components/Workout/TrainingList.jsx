@@ -1,6 +1,9 @@
+import React from 'react';
 import { Row, Col } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
-function TrainingList({ part1, part2, part3 }) {
+function TrainingList({ part1, part2, part3, setPart1, setPart2, setPart3 }) {
   return (
     <div className='trainingList'>
       <div style={{ textAlign: 'center', fontSize: '32px' }}>운동 목록</div>
@@ -12,13 +15,22 @@ function TrainingList({ part1, part2, part3 }) {
           </div>
           <div className='partBox'>
             <ol>
-              {part1.map((train) => {
+              {part1.map((train, i) => {
                 return (
                   <li>
                     {train.part}
                     {train.name}
                     {train.weight}kg
                     {train.times}회{train.num}세트
+                    <button
+                      onClick={() => {
+                        let newPart = [...part1];
+                        newPart.splice(i, 1);
+                        setPart1(newPart);
+                      }}
+                    >
+                      <i class='fa-solid fa-trash'></i>
+                    </button>
                   </li>
                 );
               })}
@@ -31,13 +43,22 @@ function TrainingList({ part1, part2, part3 }) {
           </div>
           <div className='partBox'>
             <ol>
-              {part2.map((train) => {
+              {part2.map((train, i) => {
                 return (
                   <li>
                     {train.part}
                     {train.name}
                     {train.weight}kg
                     {train.times}회{train.num}세트
+                    <button
+                      onClick={() => {
+                        let newPart = [...part2];
+                        newPart.splice(i, 1);
+                        setPart2(newPart);
+                      }}
+                    >
+                      <i class='fa-solid fa-trash'></i>
+                    </button>
                   </li>
                 );
               })}
@@ -50,13 +71,22 @@ function TrainingList({ part1, part2, part3 }) {
           </div>
           <div className='partBox'>
             <ol>
-              {part3.map((train) => {
+              {part3.map((train, i) => {
                 return (
                   <li>
                     {train.part}
                     {train.name}
                     {train.weight}kg
                     {train.times}회{train.num}세트
+                    <button
+                      onClick={() => {
+                        let newPart = [...part3];
+                        newPart.splice(i, 1);
+                        setPart3(newPart);
+                      }}
+                    >
+                      <i class='fa-solid fa-trash'></i>
+                    </button>
                   </li>
                 );
               })}
