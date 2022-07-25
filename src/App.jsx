@@ -1,6 +1,6 @@
 import './App.css';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate, Navigate } from 'react-router-dom';
 import Workout from './routers/Workout';
 import Weight from './routers/Weight';
 import Diet from './routers/Diet';
@@ -8,14 +8,19 @@ import Main from './components/Main';
 import Cal from './routers/Cal';
 
 function App() {
+  let navigate = useNavigate();
   return (
     <div className='App'>
       <Navbar bg='success' variant='dark' className='mainNav'>
         <Container>
           <Navbar.Brand href='/'>운동도우미</Navbar.Brand>
           <Nav className='me-auto'>
-            <Nav.Link href='/workout'>운동기록</Nav.Link>
-            <Nav.Link href='/diet'>식단기록</Nav.Link>
+            <Nav.Link>
+              <span onClick={() => navigate('/workout')}>운동기록</span>
+            </Nav.Link>
+            <Nav.Link href='/diet'>
+              <span onClick={() => navigate('/diet')}>식단기록</span>
+            </Nav.Link>
             <Nav.Link href='/weight'>체중기록</Nav.Link>
             <Nav.Link href='/calendar'>달력</Nav.Link>
           </Nav>

@@ -78,6 +78,16 @@ function AddTraining({ part1, setPart1, part2, setPart2, part3, setPart3 }) {
         ></input>
         <button
           onClick={() => {
+            if (
+              part == '선택' ||
+              selectTrain == '선택' ||
+              weight <= 0 ||
+              times < 1 ||
+              setNum < 1
+            ) {
+              alert('올바른 값을 입력하세요');
+              return;
+            }
             if (part == '등/이두') {
               let newList = [
                 ...part1,
