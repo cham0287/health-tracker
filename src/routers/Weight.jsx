@@ -32,7 +32,7 @@ function Weight() {
           <button>누르기!</button>
         </p>
       </div>
-      <div>당신의 BMI는 {BMI}</div>
+      <div>당신의 BMI는 {체중 > 0 && 신장 > 0 ? BMI : null}</div>
       {0 == BMI ? <p>체중을 입력하세요</p> : null}
       {0 < BMI && BMI < 10 ? <p>뼈는 잘 있는거죠?</p> : null}
       {10 <= BMI && BMI < 18.5 ? <p>저체중이시네요</p> : null}
