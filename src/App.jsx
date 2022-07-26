@@ -18,11 +18,15 @@ function App() {
             <Nav.Link>
               <span onClick={() => navigate('/workout')}>운동기록</span>
             </Nav.Link>
-            <Nav.Link href='/diet'>
+            <Nav.Link>
               <span onClick={() => navigate('/diet')}>식단기록</span>
             </Nav.Link>
-            <Nav.Link href='/weight'>체중기록</Nav.Link>
-            <Nav.Link href='/calendar'>달력</Nav.Link>
+            <Nav.Link>
+              <span onClick={() => navigate('/weight')}>체중기록</span>
+            </Nav.Link>
+            <Nav.Link>
+              <span onClick={() => navigate('/calendar')}>달력</span>
+            </Nav.Link>
           </Nav>
         </Container>
         <Container style={{ width: '15%' }}>
