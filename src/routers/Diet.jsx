@@ -17,38 +17,41 @@ function Diet() {
   return (
     <div>
       <h2>오늘 뭐 먹었어?</h2>
-      <SelectOption
-        selectState={selectState}
-        setSelectState={setSelectState}
-        foodCount={foodCount}
-        setFoodCount={setFoodCount}
-        breakfastList={breakfastList}
-        setBreakfastList={setBreakfastList}
-        lunchList={lunchList}
-        setLunchList={setLunchList}
-        dinnerList={dinnerList}
-        setDinnerList={setDinnerList}
-        snackList={snackList}
-        setSnackList={setSnackList}
-        mealTime={mealTime}
-        setMealTime={setMealTime}
-        nutrient={nutrient}
-        setNutrient={setNutrient}
-      />
-      <TakenFood
-        breakfastList={breakfastList}
-        setBreakfastList={setBreakfastList}
-        lunchList={lunchList}
-        setLunchList={setLunchList}
-        dinnerList={dinnerList}
-        setDinnerList={setDinnerList}
-        snackList={snackList}
-        setSnackList={setSnackList}
-        mealType={mealType}
-        setMealType={setMealType}
-        nutrient={nutrient}
-        setNutrient={setNutrient}
-      />
+      <div style={{ display: 'flex' }}>
+        <SelectOption
+          selectState={selectState}
+          setSelectState={setSelectState}
+          foodCount={foodCount}
+          setFoodCount={setFoodCount}
+          breakfastList={breakfastList}
+          setBreakfastList={setBreakfastList}
+          lunchList={lunchList}
+          setLunchList={setLunchList}
+          dinnerList={dinnerList}
+          setDinnerList={setDinnerList}
+          snackList={snackList}
+          setSnackList={setSnackList}
+          mealTime={mealTime}
+          setMealTime={setMealTime}
+          nutrient={nutrient}
+          setNutrient={setNutrient}
+        />
+        <TakenFood
+          breakfastList={breakfastList}
+          setBreakfastList={setBreakfastList}
+          lunchList={lunchList}
+          setLunchList={setLunchList}
+          dinnerList={dinnerList}
+          setDinnerList={setDinnerList}
+          snackList={snackList}
+          setSnackList={setSnackList}
+          mealType={mealType}
+          setMealType={setMealType}
+          nutrient={nutrient}
+          setNutrient={setNutrient}
+        />
+      </div>
+
       <TakenNutrient nutrient={nutrient} />
     </div>
   );

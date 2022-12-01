@@ -41,7 +41,7 @@ function Weight() {
       {25 <= BMI && BMI < 30 ? <p>경도비만이에요</p> : null}
       {30 <= BMI && BMI < 40 ? <p>고도비만이에요</p> : null}
       {40 <= BMI && BMI < 60 ? <p>초고도비만이에요</p> : null}
-      {60 <= BMI ? <p>사람이 아니신 것 같아요..</p> : null}
+      {60 <= BMI ? <p>사람이 아니실 것 같아요..</p> : null}
     </div>
   );
 }
